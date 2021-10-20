@@ -34,7 +34,7 @@ var controllers = io.of("/controller")
 var settings = io.of("/settings")
 
 controllers.on('connection', (socket) => {
-  var playerNumber = 0;
+  /*var playerNumber = 0;
   if(!connList[socket.client.conn.remoteAddress]){
     playerNumber = players;
     connList[socket.client.conn.remoteAddress] = playerNumber;
@@ -43,7 +43,10 @@ controllers.on('connection', (socket) => {
   }else{
     playerNumber = connList[socket.client.conn.remoteAddress];
     console.log("Player " + playerNumber + " reconnected: " + socket.client.conn.remoteAddress);
-  }
+  }*/
+
+  playerNumber = players;
+  players++;
 
   socket.on('fire', msg => {
     view.emit('fire', playerNumber);
