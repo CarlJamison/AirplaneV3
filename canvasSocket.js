@@ -97,7 +97,7 @@ function runFrame(){
 	
 	var canvas = document.getElementById("myCanvas");
 	var ctx = canvas.getContext("2d");
-	ctx.fillStyle = '#f0f0f0' //'rgba(256, 256, 256)';
+	ctx.fillStyle = '#f0f0f0'
   	ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
 
 	if(game.active){
@@ -142,7 +142,6 @@ function runFrame(){
 			ctx.fillStyle = playerColors[player.index];
 			b.xL += b.xV;
 			b.yL -= b.yV;
-			//ctx.fillRect(b.xL - 2, b.yL - 2, 5, 5);
 			
 			ctx.beginPath();
 			ctx.arc(b.xL, b.yL, 3, 0, 2 * Math.PI, false);
