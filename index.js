@@ -45,7 +45,7 @@ controllers.on('connection', (socket) => {
     console.log("Player " + playerNumber + " reconnected: " + socket.client.conn.remoteAddress);
   }*/
 
-  playerNumber = players;
+  var playerNumber = players;
   players++;
 
   socket.on('fire', msg => {
